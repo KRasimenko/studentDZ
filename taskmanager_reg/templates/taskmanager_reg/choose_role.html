@@ -1,0 +1,14 @@
+{% extends 'taskmanager_reg/base.html' %}
+
+{% block content %}
+<div class="role-choice">
+    <h2>Выберите вашу роль</h2>
+    <div class="role-buttons">
+        <a href="{% url 'taskmanager_reg:register' %}?role=student" class="btn btn-primary">Студент</a>
+        <a href="{% url 'taskmanager_reg:register' %}?role=teacher" class="btn btn-secondary">Преподаватель</a>
+    </div>
+    <div class="login-link">
+        <p>Уже есть аккаунт? <a href="{% url 'login' %}">Войти</a></p>
+    </div>
+</div>
+{% endblock %}
